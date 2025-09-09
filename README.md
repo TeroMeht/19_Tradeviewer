@@ -13,7 +13,8 @@ There is visual presentation of the tool. It shows executions on all time frames
 <img width="1887" height="908" alt="image" src="https://github.com/user-attachments/assets/a7ebaf95-e284-442a-b55b-bc0ac5e2cdf4" />
 
 
-Todo:
+
+Further developments:
 
 - Develop better organized UI structure
 - Plot multiple trades once
