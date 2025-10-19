@@ -1,0 +1,87 @@
+/* === Trade Table Styling === */
+
+#trade-table {
+  border: 1px solid #e1e1e1;
+  background-color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  table-layout: auto !important; /* allow columns to auto-adjust width */
+}
+
+/* Container for scroll / fixed headers */
+#trade-table .dash-table-container {
+  border: 1px solid #e1e1e1;
+  background-color: white;
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 500px;
+  position: relative;
+}
+
+/* Headers - sticky and allow wrapping */
+#trade-table .dash-header {
+  background-color: #f8f8f8 !important;
+  color: #333 !important;
+  font-weight: bold;
+  border: 1px solid #ddd !important;
+  font-size: 14px !important;
+  text-align: center !important;
+
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  line-height: 1.2em;
+}
+
+/* Cells */
+#trade-table .dash-cell {
+  padding: 4px !important;
+  border: 1px solid #f0f0f0 !important;
+  text-align: center !important;
+  white-space: normal !important;
+  cursor: pointer !important; /* 👈 makes the cursor a pointer */
+}
+
+/* Alternate row background */
+#trade-table .dash-cell--odd {
+  background-color: #f9f9f9 !important;
+}
+
+/* Hover effect */
+#trade-table .dash-cell:hover {
+  background-color: #f2f7ff !important;
+  cursor: pointer !important; /* 👈 ensures cursor changes on hover */
+}
+
+/* Selected and active rows */
+#trade-table .dash-cell--selected {
+  background-color: #d0e6f7 !important;
+  border: 1px solid #a6c8ff !important;
+}
+
+#trade-table .dash-cell--active {
+  background-color: #cce4ff !important;
+  border: 1px solid #8bbfff !important;
+}
+
+/* Sticky first column (optional) */
+#trade-table .dash-fixed-column {
+  position: sticky;
+  left: 0;
+  z-index: 998;
+  background-color: #f8f8f8;
+  border-right: 1px solid #ddd;
+}
+
+/* Pagination controls */
+#trade-table .dash-table-pagination {
+  border-top: 1px solid #ddd;
+  padding-top: 4px;
+}

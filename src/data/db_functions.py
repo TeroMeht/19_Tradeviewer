@@ -223,18 +223,13 @@ def fetch_trades_with_rvol(cursor, trades_table: str, marketdatad_table: str) ->
     return pd.DataFrame(data, columns=columns)
 
 
-# Write database
-def update_trade_setup(trade_id, setup, connection):
-    try:
-        cursor = connection.cursor()
-        query = """
-            UPDATE trades
-            SET "Setup" = %s
-            WHERE "TradeId" = %s;
-        """
-        cursor.execute(query, (setup, trade_id))
-        connection.commit()
-        cursor.close()  # Close the cursor after execution
-    except Exception as e:
-        print(f"Error updating Setup for TradeId {trade_id}: {e}")
-        connection.rollback()
+
+def update_trade_setup(trade_id: int, setup: str, cursor, conn) -> None:
+    query = 'UPDATE "trades" SET "Setup" = %s WHERE "TradeId" = %s;'
+    cursor.execute(query, (setup, trade_id))
+    conn.commit()
+  
+def update_trade_rating(trade_id: int, rating: int, cursor, conn) -> None:
+    query = 'UPDATE "trades" SET "Rating" = %s WHERE "TradeId" = %s;'
+    cursor.execute(query, (rating, trade_id))
+    conn.commit()
