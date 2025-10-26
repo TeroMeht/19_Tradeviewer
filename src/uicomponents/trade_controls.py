@@ -16,13 +16,13 @@ def render():
 
             html.Button("Fetch Data", id="fetch-button", n_clicks=0, style={"marginLeft": "4px"}),
 
-            html.Label("Select Setup:", style={"marginLeft": "12px", "marginRight": "4px"}),
+            html.Label("Select Setup:", style={"marginLeft": "8px", "marginRight": "4px"}),
             setup_dropdown.render(),  # modular dropdown
 
             html.Button("Save Setup", id="save-setup-button", n_clicks=0, style={"marginLeft": "4px"}),
 
-            html.Label("Rating:", style={"marginLeft": "12px", "marginRight": "4px"}),
-            dcc.Input(id="rating-input", type="number", min=1, max=5, step=1, style={"width": "60px"}),
+            html.Label("Rating:", style={"marginLeft": "8px", "marginRight": "4px"}),
+            dcc.Input(id="rating-input", type="number", min=1, max=5, step=1, style={"width": "50px"}),
 
             html.Button("Save Rating", id="save-rating-button", n_clicks=0, style={"marginLeft": "4px"}),
         ],

@@ -34,7 +34,7 @@ def create_30min_plot_component(df_30min: pd.DataFrame,
                 x=df_30min['DateStr'],
                 y=df_30min['EMA65'],
                 mode='lines',
-                line=dict(color='blue', width=1.5),
+                line=dict(color='blue', width=1),
                 name='EMA65'
             ), row=1, col=1)
 

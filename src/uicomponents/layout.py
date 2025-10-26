@@ -36,7 +36,8 @@ def create_layout(app: Dash, database_config: dict) -> html.Div:
         style={
             "display": "flex",
             "justifyContent": "center",
-            "gap": "10px",
+            "alignItems": "stretch",
+            "gap": "5px",
         },
     )
 
@@ -49,10 +50,9 @@ def create_layout(app: Dash, database_config: dict) -> html.Div:
         ],
         className="trade-section",
         style={
-            "width": "38%",
-            "display": "inline-block",
+            "width": "100%",
             "padding": "5px",
-            "verticalAlign": "top",
+            "boxSizing": "border-box",
         },
     )
 
@@ -62,16 +62,24 @@ def create_layout(app: Dash, database_config: dict) -> html.Div:
             html.Div(
                 dcc.Graph(id="intraday-chart", style={"height": "600px", "width": "100%"}),
                 style={
-                    "width": "60%",
-                    "display": "inline-block",
+                    "flex": "1",
                     "padding": "5px",
+                    "boxSizing": "border-box",
                 },
             ),
-            trade_section,
+            html.Div(
+                trade_section,
+                style={
+                    "flex": "1",
+                    "padding": "5px",
+                    "boxSizing": "border-box",
+                },
+            ),
         ],
         style={
             "display": "flex",
             "justifyContent": "center",
+            "alignItems": "stretch",
             "gap": "5px",
             "marginTop": "5px",
         },

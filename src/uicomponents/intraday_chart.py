@@ -33,7 +33,7 @@ def create_intraday_plot_component(df_intraday : pd.DataFrame,
                 x=df_intraday['Time'],
                 y=df_intraday['VWAP'],
                 mode='lines',
-                line=dict(color='red', width=2),
+                line=dict(color='red', width=1.5),
                 name='VWAP'
             ), row=1, col=1)
 
@@ -43,7 +43,7 @@ def create_intraday_plot_component(df_intraday : pd.DataFrame,
                 x=df_intraday['Time'],
                 y=df_intraday['EMA9'],
                 mode='lines',
-                line=dict(color='blue', width=1),
+                line=dict(color='blue', width=0.8),
                 name='EMA9'
             ), row=1, col=1)
 

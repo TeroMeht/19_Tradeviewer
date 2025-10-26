@@ -17,6 +17,7 @@ def generate_table(dataframe, max_rows=15):
         persistence_type='session',
         persisted_props=['page_current', 'sort_by', 'filter_query'],
         style_as_list_view=True,
+        
     )
 
 
@@ -36,7 +37,7 @@ def render():
                 style_table={"overflowX": "auto"},
             )
         ],
-        style={"width": "100%", "padding": "5px"}
+        style={"width": "95%", "padding": "20px"}
     )
 
 
